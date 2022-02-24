@@ -6,6 +6,10 @@
 trigger:
 - master
 
+
+variables:
+- group: Test-variable-group
+
 pool:
   vmImage: ubuntu-latest
 
@@ -20,3 +24,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- bash: |
+      echo "##[group]Beginning of a group"
+      echo ${var}
+ 
