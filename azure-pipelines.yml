@@ -28,4 +28,6 @@ steps:
 - bash: |
       echo "##[group]Beginning of a group"
       echo ${var}
+
+- script: echo ${var}
  
