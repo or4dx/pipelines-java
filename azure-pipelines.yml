@@ -27,7 +27,7 @@ steps:
 
 - bash: |
       echo "##[group]Beginning of a group"
-      echo This is the value - ${var}
+      echo This is the value - ${myvar}
 
-- script: echo Variable - ${var}
+- script: echo Variable - ${myvar}
  
